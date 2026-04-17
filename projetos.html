@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hub de soluções | gabriel qr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .projects-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            width: 100%;
+        }
+
+        .hero-icon-container a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .hero-icon-container a:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="portfolio-layout">
+
+        <!-- HEADER HERO (12 Colunas) -->
+        <header class="bento-card hero-card">
+            <div class="hero-icon-container">
+                <a href="index.html" aria-label="Voltar"><i class="fa-solid fa-chevron-left"></i></a>
+            </div>
+            <div class="hero-content">
+                <h1>Hub de Soluções</h1>
+                <h2><span class="highlight">Produtos</span> & Experimentos</h2>
+            </div>
+        </header>
+
+        <!-- MAIN PROJECTS CONTENT (12 Colunas) -->
+        <article class="bento-card projects-card" style="grid-column: span 12;">
+            <div class="card-title-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+                <h3>Meus Desenvolvimentos</h3>
+            </div>
+
+            <!-- Cluster 1: Engenharia de Software -->
+            <div class="cluster-section">
+                <h4 class="cluster-title"><i class="fa-solid fa-code"></i> Engenharia de Software</h4>
+                <div class="projects-grid-container">
+                    <div class="project-module">
+                        <div class="project-header">
+                            <h4><i class="fa-solid fa-magnifying-glass-chart"
+                                    style="color:var(--accent); margin-right:10px;"></i> Starlight Jobseeker</h4>
+                        </div>
+                        <p>Agregação de vagas e monitoramento analítico com integração de API.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Adzuna API</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">Automações</span>
+                        </div>
+                    </div>
+
+                    <div class="project-module">
+                        <div class="project-header">
+                            <h4><i class="fa-solid fa-bolt-lightning"
+                                    style="color:var(--accent); margin-right:10px;"></i> Starlight Autofill</h4>
+                        </div>
+                        <p>Extensão para preenchimento inteligente de formulários em larga escala.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Chrome API</span>
+                            <span class="tech-badge">Manipulação de DOM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="card-divider">
+
+            <!-- Cluster 2: Finanças & Inteligência -->
+            <div class="cluster-section">
+                <h4 class="cluster-title"><i class="fa-solid fa-chart-pie"></i> Finanças & Inteligência</h4>
+                <div class="projects-grid-container">
+                    <div class="project-module">
+                        <div class="project-header">
+                            <h4><i class="fa-solid fa-wallet" style="color:var(--accent); margin-right:10px;"></i>
+                                Starlight Moneytrail</h4>
+                        </div>
+                        <p>Ecossistema mobile para gestão de ativos, fluxo de caixa e registro de despesas.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge">Kotlin</span>
+                            <span class="tech-badge">Android Studio</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">Finanças</span>
+                        </div>
+                    </div>
+
+                    <div class="project-module">
+                        <div class="project-header">
+                            <h4><i class="fa-solid fa-shield-halved"
+                                    style="color:var(--accent); margin-right:10px;"></i> Análise de Risco Atuarial</h4>
+                        </div>
+                        <p>Modelos estatísticos e matemáticos voltados ao mercado de seguros e previdência.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge">R</span>
+                            <span class="tech-badge">Excel/VBA</span>
+                            <span class="tech-badge">Ciências Atuariais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="card-divider">
+
+            <!-- Cluster 3: Pesquisa Acadêmica -->
+            <div class="cluster-section">
+                <h4 class="cluster-title"><i class="fa-solid fa-flask"></i> Pesquisa Acadêmica</h4>
+                <div class="projects-grid-container">
+                    <div class="project-module">
+                        <div class="project-header">
+                            <h4><i class="fa-solid fa-book-open" style="color:var(--accent); margin-right:10px;"></i>
+                                Iniciação Científica / TCC</h4>
+                        </div>
+                        <p>Pesquisa acadêmica estruturada focada em rigor metodológico e análise de dados complexos.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge">LaTeX</span>
+                            <span class="tech-badge">Modelagem Estatística</span>
+                            <span class="tech-badge">Escrita Acadêmica</span>
+                            <span class="tech-badge">Validação de Dados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <nav class="action-dock" id="themeDock" style="bottom: 110px;">
+        <button class="dock-toggle" id="themeDockToggle" aria-label="Toggle Theme Dock">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="dock-wrapper">
+            <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Alternar Tema">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <nav class="action-dock" id="actionDock">
+        <button class="dock-toggle" id="dockToggle" aria-label="Toggle Dock">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="dock-wrapper">
+            <a href="https://linkedin.com/in/gabrielqramires" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/aqramires" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/5511981564181" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="dock-sep"></div>
+            <a href="cv_gabriel_qr.pdf" download class="dock-cv">
+                <i class="fa-solid fa-download"></i> <span>CV</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="actions.js"></script>
+</body>
+
+</html>
