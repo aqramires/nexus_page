@@ -105,4 +105,116 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // ==== Network Canvas Background ====
+    const canvas = document.getElementById('networkBg');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+        
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        // Função para pegar a cor baseado no tema
+        const getLineColor = () => document.body.getAttribute('data-theme') === 'dark' ? 'rgba(255, 255, 255, ' : 'rgba(15, 23, 42, ';
+
+        for (let i = 0; i < 60; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5
+            });
+        }
+
+        let mouse = { x: -1000, y: -1000 };
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, width, height);
+            
+            const colorBase = getLineColor();
+
+            for(let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+                ctx.fillStyle = colorBase + '0.3)';
+                ctx.fill();
+
+                for(let j = i + 1; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = colorBase + (1 - dist/120) * 0.15 + ')';
+                        ctx.stroke();
+                    }
+                }
+
+                // Connect to mouse
+                const dxMouse = p.x - mouse.x;
+                const dyMouse = p.y - mouse.y;
+                const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
+                if (distMouse < 150) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    ctx.strokeStyle = 'rgba(56, 189, 248, ' + (1 - distMouse/150) * 0.4 + ')';
+                    ctx.stroke();
+                }
+            }
+        }
+        animate();
+    }
+
+    // ==== Lógica de Modais de Projetos ====
+    const projectModules = document.querySelectorAll('.project-module[data-modal]');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalBody = document.getElementById('modalBody');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+    if (projectModules.length > 0 && modalOverlay) {
+        projectModules.forEach(module => {
+            module.addEventListener('click', () => {
+                const templateId = module.getAttribute('data-modal');
+                const template = document.getElementById(templateId);
+                if (template) {
+                    modalBody.innerHTML = template.innerHTML;
+                    modalOverlay.classList.add('active');
+                }
+            });
+        });
+
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', () => {
+                modalOverlay.classList.remove('active');
+            });
+        }
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('active');
+            }
+        });
+    }
 });
