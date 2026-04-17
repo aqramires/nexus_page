@@ -67,11 +67,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dockToggle && actionDock) {
         // Checa preferência salva
         const actionDockState = localStorage.getItem('actionDockState');
+        const icon = dockToggle.querySelector('i');
+        
+        actionDock.style.transition = 'none';
+        if(icon) icon.style.transition = 'none';
+
         if (actionDockState === 'retracted') {
             actionDock.classList.add('retracted');
         } else if (actionDockState === 'expanded') {
             actionDock.classList.remove('retracted');
         }
+
+        // Força o reflow para aplicar a classe sem animar
+        void actionDock.offsetWidth;
+        
+        actionDock.style.transition = '';
+        if(icon) icon.style.transition = '';
 
         dockToggle.addEventListener('click', () => {
             actionDock.classList.toggle('retracted');
@@ -89,11 +100,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeDockToggle && themeDock) {
         // Checa preferência salva
         const themeDockState = localStorage.getItem('themeDockState');
+        const icon = themeDockToggle.querySelector('i');
+        
+        themeDock.style.transition = 'none';
+        if(icon) icon.style.transition = 'none';
+
         if (themeDockState === 'retracted') {
             themeDock.classList.add('retracted');
         } else if (themeDockState === 'expanded') {
             themeDock.classList.remove('retracted');
         }
+
+        // Força o reflow para aplicar a classe sem animar
+        void themeDock.offsetWidth;
+        
+        themeDock.style.transition = '';
+        if(icon) icon.style.transition = '';
 
         themeDockToggle.addEventListener('click', () => {
             themeDock.classList.toggle('retracted');

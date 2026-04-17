@@ -76,7 +76,7 @@
                     <div class="project-module" data-modal="tpl-autofill">
                         <div class="project-header">
                             <h4><i class="fa-solid fa-bolt-lightning"
-                                    style="color:var(--accent); margin-right:10px;"></i> Starlight Autofill</h4>
+                                    style="color:var(--accent); margin-right:10px;"></i> Starlight Autofiller</h4>
                         </div>
                         <p>Extensão para preenchimento inteligente de formulários em larga escala.</p>
                         <div class="tech-badges">
@@ -151,56 +151,73 @@
     <!-- MODAIS DE PROJETO -->
     <div class="project-modal-overlay" id="modalOverlay">
         <div class="project-modal-content">
-            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fechar"><i
+                    class="fa-solid fa-xmark"></i></button>
             <div id="modalBody"></div>
         </div>
     </div>
 
     <template id="tpl-jobseeker">
-        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-cogs" style="color:var(--accent); margin-right: 15px;"></i> Starlight Jobseeker</h2>
+        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-cogs"
+                style="color:var(--accent); margin-right: 15px;"></i> Starlight Jobseeker</h2>
         <div class="modal-section">
             <h3>O Desafio</h3>
-            <p>A fragmentação de vagas em plataformas distintas dificultava o monitoramento e a análise quantitativa do mercado para carreiras específicas. Havia a necessidade de consolidar os dados e extrair insights analíticos de forma escalável.</p>
+            <p>A fragmentação de vagas em plataformas distintas dificultava o monitoramento e a análise quantitativa do
+                mercado para carreiras específicas. Havia a necessidade de consolidar os dados e extrair insights
+                analíticos de forma escalável.</p>
         </div>
         <div class="modal-section">
             <h3>A Engenharia</h3>
-            <p>Construída em Python, a aplicação consome a API da Adzuna, filtrando requisições em tempo real. Os dados são estruturados com Pandas e disponibilizados em um dashboard interativo para análise exploratória e rastreamento de aplicações.</p>
+            <p>Construída em Python, a aplicação consome a API da Adzuna, filtrando requisições em tempo real. Os dados
+                são estruturados com Pandas e disponibilizados em um dashboard interativo para análise exploratória e
+                rastreamento de aplicações.</p>
         </div>
         <div class="modal-section">
             <h3>O Impacto</h3>
-            <p>Redução drástica no tempo gasto na busca manual de vagas, gerando um repositório centralizado que permite visão estratégica e exportação automatizada para acompanhamento do funil de candidaturas.</p>
+            <p>Redução drástica no tempo gasto na busca manual de vagas, gerando um repositório centralizado que permite
+                visão estratégica e exportação automatizada para acompanhamento do funil de candidaturas.</p>
         </div>
     </template>
 
     <template id="tpl-moneytrail">
-        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-search-dollar" style="color:var(--accent); margin-right: 15px;"></i> Starlight Moneytrail</h2>
+        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-search-dollar"
+                style="color:var(--accent); margin-right: 15px;"></i> Starlight Moneytrail</h2>
         <div class="modal-section">
             <h3>O Desafio</h3>
-            <p>Ausência de uma ferramenta mobile que unificasse a gestão de fluxo de caixa pessoal com uma auditoria rigorosa de despesas em tempo real, sem dependência de planilhas complexas.</p>
+            <p>Ausência de uma ferramenta mobile que unificasse a gestão de fluxo de caixa pessoal com uma auditoria
+                rigorosa de despesas em tempo real, sem dependência de planilhas complexas.</p>
         </div>
         <div class="modal-section">
             <h3>A Engenharia</h3>
-            <p>Desenvolvido nativamente em Kotlin para Android Studio, o aplicativo utiliza banco de dados para armazenamento local e logs imutáveis, garantindo integridade e consistência transacional nos registros de ativos e passivos.</p>
+            <p>Desenvolvido nativamente em Kotlin para Android Studio, o aplicativo utiliza banco de dados para
+                armazenamento local e logs imutáveis, garantindo integridade e consistência transacional nos registros
+                de ativos e passivos.</p>
         </div>
         <div class="modal-section">
             <h3>O Impacto</h3>
-            <p>Centralizou 100% da operação financeira em um único ecossistema mobile de alta performance, permitindo rastreabilidade granular e projeções analíticas sobre o patrimônio consolidado.</p>
+            <p>Centralizou 100% da operação financeira em um único ecossistema mobile de alta performance, permitindo
+                rastreabilidade granular e projeções analíticas sobre o patrimônio consolidado.</p>
         </div>
     </template>
 
     <template id="tpl-autofill">
-        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-bolt" style="color:var(--accent); margin-right: 15px;"></i> Starlight Autofill</h2>
+        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-bolt"
+                style="color:var(--accent); margin-right: 15px;"></i> Starlight Autofill</h2>
         <div class="modal-section">
             <h3>O Desafio</h3>
-            <p>Processos seletivos exigem o preenchimento repetitivo de formulários extensos. A tarefa consumia tempo excessivo e era propensa a erros de digitação.</p>
+            <p>Processos seletivos exigem o preenchimento repetitivo de formulários extensos. A tarefa consumia tempo
+                excessivo e era propensa a erros de digitação.</p>
         </div>
         <div class="modal-section">
             <h3>A Engenharia</h3>
-            <p>Extensão baseada em JavaScript Vanilla e Chrome API. O script injeta lógica de mapeamento no DOM, identificando campos de formulário por heurísticas e auto-preenchendo dados armazenados no navegador.</p>
+            <p>Extensão baseada em JavaScript Vanilla e Chrome API. O script injeta lógica de mapeamento no DOM,
+                identificando campos de formulário por heurísticas e auto-preenchendo dados armazenados no navegador.
+            </p>
         </div>
         <div class="modal-section">
             <h3>O Impacto</h3>
-            <p>Acelerou o tempo de candidatura em mais de 90% (de minutos para instantes), aumentando drasticamente o volume e a precisão das submissões diárias.</p>
+            <p>Acelerou o tempo de candidatura em mais de 90% (de minutos para instantes), aumentando drasticamente o
+                volume e a precisão das submissões diárias.</p>
         </div>
     </template>
 
