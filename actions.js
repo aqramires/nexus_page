@@ -65,8 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const actionDock = document.getElementById('actionDock');
 
     if (dockToggle && actionDock) {
+        // Checa preferência salva
+        const actionDockState = localStorage.getItem('actionDockState');
+        if (actionDockState === 'retracted') {
+            actionDock.classList.add('retracted');
+        } else if (actionDockState === 'expanded') {
+            actionDock.classList.remove('retracted');
+        }
+
         dockToggle.addEventListener('click', () => {
             actionDock.classList.toggle('retracted');
+            if (actionDock.classList.contains('retracted')) {
+                localStorage.setItem('actionDockState', 'retracted');
+            } else {
+                localStorage.setItem('actionDockState', 'expanded');
+            }
         });
     }
 
@@ -74,8 +87,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeDock = document.getElementById('themeDock');
 
     if (themeDockToggle && themeDock) {
+        // Checa preferência salva
+        const themeDockState = localStorage.getItem('themeDockState');
+        if (themeDockState === 'retracted') {
+            themeDock.classList.add('retracted');
+        } else if (themeDockState === 'expanded') {
+            themeDock.classList.remove('retracted');
+        }
+
         themeDockToggle.addEventListener('click', () => {
             themeDock.classList.toggle('retracted');
+            if (themeDock.classList.contains('retracted')) {
+                localStorage.setItem('themeDockState', 'retracted');
+            } else {
+                localStorage.setItem('themeDockState', 'expanded');
+            }
         });
     }
 
