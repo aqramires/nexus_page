@@ -57,12 +57,54 @@
 
             <!-- Cluster 1: Engenharia de Software -->
             <div class="cluster-section">
-                <h4 class="cluster-title"><i class="fa-solid fa-code"></i> Engenharia de Software</h4>
+                <h4 class="cluster-title"><i class="fa-solid fa-code"></i> Software</h4>
                 <div class="projects-grid-container">
+                    <div class="project-module" data-modal="tpl-vicivirtude">
+                        <div class="project-header">
+                            <h4><i class="fa-solid fa-peace"
+                                    style="color:var(--accent); margin-right:10px;"></i> ViciVirtude</h4>
+                        </div>
+                        <p>Gestão de hábitos com rastreamento de 'vícios' e 'virtudes' em tempo real.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge">Android</span>
+                            <span class="tech-badge">Kotlin</span>
+                            <span class="tech-badge">Jetpack Compose</span>
+                            <span class="tech-badge">Room</span>
+                        </div>
+                    </div>
+
+                    <div class="project-module" data-modal="tpl-razonetts">
+                        <div class="project-header">
+                            <h4><i class="fa-solid fa-calculator"
+                                    style="color:var(--accent); margin-right:10px;"></i> Razonetts</h4>
+                        </div>
+                        <p>Plataforma contábil para organização de razonetes e geração de balanços.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge">Android</span>
+                            <span class="tech-badge">Kotlin</span>
+                            <span class="tech-badge">MVVM</span>
+                            <span class="tech-badge">Hilt</span>
+                        </div>
+                    </div>
+
+                    <div class="project-module" data-modal="tpl-coinkeeper">
+                        <div class="project-header">
+                            <h4><i class="fa-solid fa-wallet"
+                                    style="color:var(--accent); margin-right:10px;"></i> Coinkeeper</h4>
+                        </div>
+                        <p>Organização de carteiras e análise financeira multiusuário.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge">Android</span>
+                            <span class="tech-badge">Kotlin</span>
+                            <span class="tech-badge">Finanças</span>
+                            <span class="tech-badge">UX Design</span>
+                        </div>
+                    </div>
+
                     <div class="project-module" data-modal="tpl-jobseeker">
                         <div class="project-header">
                             <h4><i class="fa-solid fa-magnifying-glass-chart"
-                                    style="color:var(--accent); margin-right:10px;"></i> Starlight Jobseeker</h4>
+                                    style="color:var(--accent); margin-right:10px;"></i> Jobseeker</h4>
                         </div>
                         <p>Agregação de vagas e monitoramento analítico com integração de API.</p>
                         <div class="tech-badges">
@@ -76,7 +118,7 @@
                     <div class="project-module" data-modal="tpl-autofill">
                         <div class="project-header">
                             <h4><i class="fa-solid fa-bolt-lightning"
-                                    style="color:var(--accent); margin-right:10px;"></i> Starlight Autofiller</h4>
+                                    style="color:var(--accent); margin-right:10px;"></i> Autofiller</h4>
                         </div>
                         <p>Extensão para preenchimento inteligente de formulários em larga escala.</p>
                         <div class="tech-badges">
@@ -101,7 +143,7 @@
                     </div>
                     <p>Modelos estatísticos e matemáticos voltados ao mercado de seguros e previdência.</p>
                     <div class="tech-badges">
-                        <span class="tech-badge">R</span>
+                        <span class="tech-badge">Python</span>
                         <span class="tech-badge">Excel/VBA</span>
                         <span class="tech-badge">Ciências Atuariais</span>
                     </div>
@@ -143,20 +185,56 @@
         </div>
     </div>
 
+    <template id="tpl-vicivirtude">
+        <div style="margin-bottom: 25px;">
+            <h2 style="font-size: 2rem;"><i class="fa-solid fa-peace" style="color:var(--accent); margin-right: 15px;"></i> ViciVirtude</h2>
+        </div>
+        <div class="modal-section">
+            <h3>O Desafio</h3>
+            <p>Acompanhar hábitos exige persistência e clareza. Muitos aplicativos focam apenas no positivo, ignorando a necessidade de monitorar e reduzir hábitos negativos (vicios) de forma equilibrada.</p>
+        </div>
+        <div class="modal-section">
+            <h3>O Impacto</h3>
+            <p>Oferece uma visão dualística do comportamento do usuário, permitindo o registro imediato de eventos e visualização de streaks (sequências), promovendo o autoconhecimento e a disciplina através de lembretes inteligentes.</p>
+        </div>
+    </template>
+
+    <template id="tpl-razonetts">
+        <div style="margin-bottom: 25px;">
+            <h2 style="font-size: 2rem;"><i class="fa-solid fa-calculator" style="color:var(--accent); margin-right: 15px;"></i> Razonetts</h2>
+        </div>
+        <div class="modal-section">
+            <h3>O Desafio</h3>
+            <p>O ensino e a prática contábil muitas vezes dependem de processos manuais lentos. Havia a carência de uma ferramenta mobile ágil para estruturar razonetes (T-accounts) e visualizar o fluxo financeiro instantaneamente.</p>
+        </div>
+        <div class="modal-section">
+            <h3>O Impacto</h3>
+            <p>Transforma a organização contábil em um processo intuitivo, permitindo a geração de relatórios detalhados e facilitando o aprendizado e a gestão de instituições através de uma interface técnica e minimalista.</p>
+        </div>
+    </template>
+
+    <template id="tpl-coinkeeper">
+        <div style="margin-bottom: 25px;">
+            <h2 style="font-size: 2rem;"><i class="fa-solid fa-wallet" style="color:var(--accent); margin-right: 15px;"></i> Coinkeeper</h2>
+        </div>
+        <div class="modal-section">
+            <h3>O Desafio</h3>
+            <p>Gerenciar múltiplas carteiras e analisar fluxos de renda em ambientes compartilhados ou individuais pode ser caótico sem uma centralização inteligente de dados financeiros.</p>
+        </div>
+        <div class="modal-section">
+            <h3>O Impacto</h3>
+            <p>Proporciona controle financeiro absoluto através de uma interface moderna, convertendo registros cotidianos em inteligência de suporte à decisão para melhor gestão de recursos e planejamento pessoal.</p>
+        </div>
+    </template>
+
     <template id="tpl-jobseeker">
-        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-cogs"
-                style="color:var(--accent); margin-right: 15px;"></i> Starlight Jobseeker</h2>
+        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-magnifying-glass-chart"
+                style="color:var(--accent); margin-right: 15px;"></i> Jobseeker</h2>
         <div class="modal-section">
             <h3>O Desafio</h3>
             <p>A fragmentação de vagas em plataformas distintas dificultava o monitoramento e a análise quantitativa do
                 mercado para carreiras específicas. Havia a necessidade de consolidar os dados e extrair insights
                 analíticos de forma escalável.</p>
-        </div>
-        <div class="modal-section">
-            <h3>A Engenharia</h3>
-            <p>Construída em Python, a aplicação consome a API da Adzuna, filtrando requisições em tempo real. Os dados
-                são estruturados com Pandas e disponibilizados em um dashboard interativo para análise exploratória e
-                rastreamento de aplicações.</p>
         </div>
         <div class="modal-section">
             <h3>O Impacto</h3>
@@ -166,18 +244,12 @@
     </template>
 
     <template id="tpl-autofill">
-        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-bolt"
-                style="color:var(--accent); margin-right: 15px;"></i> Starlight Autofill</h2>
+        <h2 style="margin-bottom: 20px; font-size: 1.8rem;"><i class="fa-solid fa-bolt-lightning"
+                style="color:var(--accent); margin-right: 15px;"></i> Autofiller</h2>
         <div class="modal-section">
             <h3>O Desafio</h3>
             <p>Processos seletivos exigem o preenchimento repetitivo de formulários extensos. A tarefa consumia tempo
                 excessivo e era propensa a erros de digitação.</p>
-        </div>
-        <div class="modal-section">
-            <h3>A Engenharia</h3>
-            <p>Extensão baseada em JavaScript Vanilla e Chrome API. O script injeta lógica de mapeamento no DOM,
-                identificando campos de formulário por heurísticas e auto-preenchendo dados armazenados no navegador.
-            </p>
         </div>
         <div class="modal-section">
             <h3>O Impacto</h3>
